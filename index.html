@@ -97,19 +97,45 @@
 						<div class="relative">
 							<div class="thumb">
 								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="images/portofolio_android_1.jpg" alt="">
+								<a href="#section-portfolio" class="pop">
+									<img class="image img-fluid" src="images/portofolio_android_1.jpg" alt="">
+								</a>
 							</div>
-							<a href="images/portofolio_android_1.jpg" class="img-pop-up">  
+							<!-- <a href="images/portofolio_android_1.jpg" class="img-pop-up">  
 								<div class="middle">
-									<div class="text align-self-center d-flex"><img src="images/preview.png" alt=""></div>
+									<div class="text align-self-center d-flex">
+										<a href="#" class="pop">
+											<img src="images/portofolio_on_progress.jpg" alt="">
+										</a>
+									</div>
 								</div>
-							</a>                                
+							</a>                                 -->
 						</div> 
 						<div class="p-inner">
 							<h4>Movie Ticket Application</h4>
 							<div class="cat">Android Kotlin</div>
 						</div>
 					</div> 
+
+					<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+						  <div class="modal-content">
+							<div class="modal-body">
+							  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							  <br><br>
+							  <img src="" class="imagepreview" style="width: 100%;"> 	
+							  <br><br>						  
+							  <h3 style="color: black;">
+									Movie Ticket
+							  </h3>
+							  <p style="color: black;">
+								In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content
+								</p>
+							</div> 
+						  </div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -237,6 +263,16 @@
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 	<script src="js/custom.js"></script>
+
+	<script>
+
+		$(function() {
+				$('.pop').on('click', function() {
+					$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+					$('#imagemodal').modal('show');   
+				});		
+		});
+	</script>
 
 	<!-- Google Map -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
